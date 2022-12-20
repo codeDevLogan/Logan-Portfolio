@@ -1,5 +1,7 @@
 :root{
-    
+    --bor-col: #000;
+    --accent: #ff9500;
+    --fadded-accent: #ff950050
 }
 
 *{
@@ -15,6 +17,7 @@ h2{
     font-size: 350%;
 }
 header{
+    background-color: var(--accent);
     display: flex;
     justify-content: space-between;
 }
@@ -38,7 +41,7 @@ main div{
 
 main div h2{
     display: flex;
-    border-right: 5px solid #000;
+    border-right: 5px solid var(--bor-col);
     padding: 10px;
     margin-top: 20px;
     margin-right: 15px;
@@ -46,9 +49,113 @@ main div h2{
     text-align: end;
 }
 
+#first-img{
+    flex: 0 0 100%;
+}
+
+#work section a{ 
+    flex: 0 0 50%;
+    
+    /*display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: auto;
+    justify-content: space-between;
+    padding: 0;*/
+}
+
+#work section a button, #work section a button img{
+    width: 100%;
+    padding: 0;
+}
+
+a #first-img img~a .press-me img, a~a .press-me{
+    max-width: 45%;
+    padding: 0;
+}
+
+div p, div ul, div section a button{
+    margin-top: 20px;
+    margin-right: 35px;
+    padding: 0;
+}
+
 #about-me h2{
-    margin-left: 72px;
+    margin-left: 64px;
 }
 #work h2{
     margin-left: 170px;
+}
+
+.press-me{
+    background-color: var(--fadded-accent);
+    color: #000;
+    border: none;
+    outline: none;
+    position: relative;
+    cursor: pointer;
+}
+
+.press-me p{
+    position: absolute;
+    bottom: 20px;
+    padding: 20px 20px 20px 30px;
+    background-color: var(--accent);
+}
+
+.press-me::before{
+    content: '';
+    font-size: 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background-color: var(--fadded-accent);
+    transform: scaleX(0);
+    transition: transform 500ms ease-in-out;
+    transform-origin: bottom;
+}
+.press-me{
+    z-index: 1;
+}
+.press-me:hover::before{
+    transform: scaleX(1);
+}
+
+#work section img::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 0;
+
+    background-color: var(--fadded-accent);
+}
+
+#contact-me {
+    display: flex;
+    width: auto;
+    align-items: center;
+    flex-direction: row;
+}
+#contact-me ul{
+    display: flex;
+    flex-direction: row;
+    margin: 30px;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+#contact-me ul li{
+    display: flex;
+    margin-left: 10em;
+    justify-content: space-around;
+}
+
+
+footer{
+    background-color: blue;
 }
