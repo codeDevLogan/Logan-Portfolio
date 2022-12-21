@@ -97,20 +97,16 @@ div p{
     display: block;
 }
 
-#work h2{
-    margin-left: 5%;
-}
 
 .side-headers{
     margin-left: 50px;
+    min-width: 3em;
+    padding-right: 0.5em;
 }
 
 
-#about-me h2{
-    margin-left: 3.6%;
-}
 #contact-me h2{
-    margin-left: 2.2%;
+    max-width: 1em;
 }
 
 .press-me{
