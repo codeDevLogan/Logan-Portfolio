@@ -19,13 +19,27 @@ h2{
 header{
     background-color: var(--accent);
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    width: auto;
+    height: auto;
+}
+header h1{
+    color: #fff;
+    background-color: rgb(39, 39, 195);
+    height: 50px;
+}
+header img{
+    object-position: bottom left;
+    width: 500px;
+    height: 500px;
 }
 header nav {
     display: flex;
     justify-content: space-evenly;
 }
 nav a{
+    display: flex;
+    justify-content: flex-end;
     margin: 5px;
 }
 
@@ -49,11 +63,11 @@ main div h2{
     text-align: end;
 }
 
-#first-img{
+#first-img button{
     flex: 0 0 100%;
 }
 
-#work section a{ 
+#work section a, #work section a button{ 
     flex: 0 0 50%;
     
     /*display: flex;
@@ -79,12 +93,24 @@ div p, div ul, div section a button{
     margin-right: 35px;
     padding: 0;
 }
+div p{
+    display: block;
+}
+
+#work h2{
+    margin-left: 5%;
+}
+
+.side-headers{
+    margin-left: 50px;
+}
+
 
 #about-me h2{
-    margin-left: 64px;
+    margin-left: 3.6%;
 }
-#work h2{
-    margin-left: 170px;
+#contact-me h2{
+    margin-left: 2.2%;
 }
 
 .press-me{
@@ -98,6 +124,7 @@ div p, div ul, div section a button{
 
 .press-me p{
     position: absolute;
+    font-size: 36px;
     bottom: 20px;
     padding: 20px 20px 20px 30px;
     background-color: var(--accent);
@@ -157,5 +184,8 @@ div p, div ul, div section a button{
 
 
 footer{
-    background-color: blue;
+    background-color: rgb(39, 39, 195);
+    font-size: 36px;
+    display: flex;
+    justify-content: center;
 }
